@@ -1,12 +1,12 @@
-package dsfsdf;
+package vuthanhtruong;
 
 import java.util.ArrayList;
 public class trunksne {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int M[]=new int[] {-1, 1,-5,-8,5};
-		int k=0;
-		ArrayList<Integer> arrayList=new ArrayList<Integer>();
+	    int M[]=new int[] {2, 0, 6, 7};
+	    int k=6;
+	    ArrayList<Integer> arrayList=new ArrayList<Integer>();
 	    ArrayList<String> arrayList2=new ArrayList<String>();
 		if(k==0) {
 			int count=0;
@@ -39,8 +39,10 @@ public class trunksne {
 	}
 	private static void tatcacactohopcacso(int[] M, int k,ArrayList<Integer> arrayList,ArrayList<String> arrayList2) {
 		for(int i=0;i<M.length;i++) {
-			for(int j=0;j<=k/M[i];j++) {
-				arrayList.add(M[i]);
+			if(M[i]!=0) {
+				for(int j=0;j<=k/M[i];j++) {
+					arrayList.add(M[i]);
+				}
 			}
 		}
 		M=new int[arrayList.size()];
