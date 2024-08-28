@@ -1,11 +1,11 @@
-package vuthanhtruong;
+package ToHop;
 
 import java.util.ArrayList;
 public class trunksne {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	    int M[]=new int[] {2, 0, 6, 7};
-	    int k=6;
+	    int M[]=new int[] {1,2,3,4};
+	    int k=5;
 	    ArrayList<Integer> arrayList=new ArrayList<Integer>();
 	    ArrayList<String> arrayList2=new ArrayList<String>();
 		if(k==0) {
@@ -49,7 +49,7 @@ public class trunksne {
 		for(int i=0;i<arrayList.size();i++) {
 			M[i]=arrayList.get(i);
 		}
-		for(int i=0;i<M.length;i++) {
+		for(int i=0;i<=M.length;i++) {
 			for(int j=0;j<M.length-1;j++) {
 				int count2=0;
 				while(count2<M.length) {
@@ -73,9 +73,11 @@ public class trunksne {
 					}
 					count2++;
 				}
-				int teamp=M[j];
-				M[j]=M[j+1];
-				M[j+1]=teamp;
+				if(i<=M.length) {
+					int teamp=M[j];
+					M[j]=M[j+1];
+					M[j+1]=teamp;
+				}
 			}
 		}
 		if(arrayList2.size()==0) {
